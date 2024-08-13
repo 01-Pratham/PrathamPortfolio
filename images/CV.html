@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button for Resume Download</title>
+    <style>
+        .oval-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #3722cf;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .oval-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <button class="oval-button" onclick="downloadImage()">Click here to download the image</button>
+
+    <script>
+        function downloadImage() {
+            const link = document.createElement('a');
+            link.href = "D:/Personal Port/Portfolio-Website-Template-main/Portfolio-Website-Template-main/images/CV.png"; // Replace with the path to your image
+            link.download = 'CV.png'; // Optional: specify a different filename for the downloaded image
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
